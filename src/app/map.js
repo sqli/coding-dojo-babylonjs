@@ -5,7 +5,8 @@ class Map {
     }
 
     initScene(engine) {
-        this.scene;
+        this.scene = new BABYLON.Scene(engine);
+        this.scene.clearColor = new BABYLON.Color3(0, 0, 0);
     }
 
 }
