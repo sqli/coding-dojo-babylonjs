@@ -23,11 +23,15 @@ class Map {
         let ground = BABYLON.Mesh.CreateGround('ground1', 6, 6, 2, this.scene);
         ground.material = materials.groundMaterial;
         ground.receiveShadows = true;
+
+        sphere.physicsImpostor = new BABYLON.PhysicsImpostor(sphere, BABYLON.PhysicsImpostor.SphereImpostor, { mass: 1, restitution: 0.5 }, this.scene);
+        ground.physicsImpostor = new BABYLON.PhysicsImpostor(ground, BABYLON.PhysicsImpostor.BoxImpostor, { mass: 0, restitution: 0.5 }, this.scene);
     }
 
     initScene(engine) {
         this.scene = new BABYLON.Scene(engine);
         this.scene.clearColor = new BABYLON.Color3(0, 0, 0);
+        this.scene.enablePhysics();
     }
 
 }
