@@ -13,10 +13,12 @@ Step 2
 * Add Light
 * Add Sphere to scene
 * Add Ground to scene
+
+Step 3
 * Add Textures to the sphere and the ground
 * Add shadow
 
-Step 3 : https://doc.babylonjs.com/how_to/using_the_physics_engine
+Step 4 : https://doc.babylonjs.com/how_to/using_the_physics_engine
 * Enable physics with CannonJS
 * Add gravity
 
